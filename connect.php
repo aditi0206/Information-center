@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost","root","","registration");
+$connect = mysqli_connect("localhost","root","","library");
 if(isset($_POST['register'])){
     
     $roll = $_POST['roll'];
