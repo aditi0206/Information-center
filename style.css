@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./asset/hindalco_1581513195017.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sidebar {
+    width: 19%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: #353b48;
+    left: -100%;
+    transition: 0.6s;
+    padding: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 25px;
+    transition: 0.4s;
+}
+
+a i {
+    margin-right: 15px;
+}
+
+.sidebar ul li a:hover {
+    border-left: 10px solid white;
+    background-color: goldenrod;
+}
+
+.login {
+    padding: 20px;
+    margin-left: 1150px;
+    background: linear-gradient(to left, #302b63, #480048, #C04848, #1D2671);
+    border-radius: 20px;
+    height: 550px;
+    width: 350px;
+    margin-top: -290px;
+    box-shadow: 10px 10px 10px 5px;
+    text-shadow: 4px 4px 4px rgb(68, 2, 68);
+}
+
+.login img {
+    height: 200px;
+    width: 280px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+#un {
+    background-color: cornsilk;
+    font-size: 15px;
+    box-shadow: 3px 3px 3px 3px rgb(32, 1, 32);
+}
+
+#pss {
+    background-color: cornsilk;
+    font-size: 15px;
+    box-shadow: 3px 3px 3px 3px rgb(32, 1, 32);
+}
+
+#sub {
+    font-size: 15px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    box-shadow: 4px 4px 4px rgb(105, 6, 6);
+    background: linear-gradient( to top, #ED213A, #93291E, #e73827, #DC281E, #F00000, #f85032);
+}
+
+.show-btn,
+.hide-btn {
+    font-size: 35px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+}
+
+.hide-btn {
+    opacity: 0;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+}
+
+#chk:checked~.sidebar {
+    left: 0;
+}
+
+#chk:checked~.show-btn {
+    opacity: 0;
+}
+
+#chk:checked~.hide-btn {
+    opacity: 1;
+}
+
+#chk:checked~body {
+    width: 81%;
+    transition: 0.9s;
+}
+
+@media (max-width:768px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    .header h1 {
+        display: none;
+    }
+}

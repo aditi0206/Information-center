@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Enter the book id for getting the info</h2>
+    <input type="text" id="user" required="required"><br>
+    <button type="button" onclick="getdata();">GET</button>
+    <p>rollno: <strong id="rolln"></strong></p>
+    <p>name: <strong id="Name"></strong></p>
+    <p>Gender: <strong id="gender"></strong></p>
+    <p>Address: <strong id="Addresss"></strong></p>
+
+
+
+
+</body>
+
+<script>
+    function getdata() {
+        var user = document.getElementById("user").value;
+        //firebase data retrieved function
+        //path of your data 
+        //once will get all your dsta in one time
+        firebase.database().ref('student/' + user).once('value').then(function(snapshort) {
+            var rolln = snapshot.val.rollno;
+            var Name = snapshot.val.name;
+            var gender = snapshot.val.Gender;
+            var Addresss = snapshot.val.Address;
+            //now we have data in variable and show them in html
+
+            document.getElementById("rolln").innerHTML = rolln;
+            document.getElementById("Name").innerHTML = Name;
+            document.getElementById("gender").innerHTML = gender;
+            document.getElementById("Addresss").innerHTML = Addresss;
+
+        })
+    }
+</script>
+
+</html>
