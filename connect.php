@@ -16,10 +16,10 @@ if(isset($_POST['register'])){
     $result = mysqli_query($connect,$query);
 
     if($result){
-        echo "registered";
+        echo "Login successful";
 
     }else{
-        echo "not registered";
+        echo "Login not successful";
     }
 
 }
