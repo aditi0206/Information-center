@@ -2,9 +2,9 @@
 $connect = mysqli_connect("localhost","root","","library");
 if(isset($_POST['register'])){
     
-    $roll = $_POST['roll'];
-    $Uname = $_POST['Uname'];
-    $pass = $_POST['pass'];
+    echo $roll = $_POST['roll'];
+    echo $Uname = $_POST['Uname'];
+    echo $pass = $_POST['pass'];
     
     // $register = $_POST['register'];
 
