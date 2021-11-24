@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: wheat;
+    }
+    
+    .header {
+        width: 100%;
+        height: 80px;
+        background-color: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .left {
+        margin-left: 50%;
+        font-size: 23px;
+        font-family: cursive;
+        margin-top: 30px;
+        float: right;
+        margin-bottom: -30px;
+    }
+    
+    .right img {
+        width: 35%;
+        height: 70vh;
+        margin-left: 70px;
+        margin-top: -25%;
+    }
+    
+    .social {
+        color: #d81b1b;
+        font-size: 30px;
+        padding: 10px;
+        margin-left: 50%;
+        margin-top: -70px;
+    }
+    
+    .social:hover {
+        color: #3d3d3d;
+    }
+    
+    .sidebar {
+        width: 17%;
+        height: 100%;
+        position: fixed;
+        top: 68px;
+        background-color: #353b48;
+        left: -100%;
+        transition: 0.6s;
+        padding: 30px;
+    }
+    
+    .sidebar ul {
+        list-style: none;
+        margin-left: -20px;
+    }
+    
+    .sidebar ul li {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: -10px;
+    }
+    
+    .sidebar ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 15px 25px;
+        transition: 0.4s;
+    }
+    
+    a i {
+        margin-right: 15px;
+    }
+    
+    .sidebar ul li a:hover {
+        border-left: 10px solid white;
+        background-color: goldenrod;
+    }
+    
+    .show-btn,
+    .hide-btn {
+        font-size: 35px;
+        color: white;
+        position: fixed;
+        top: 20px;
+        left: 50px;
+    }
+    
+    .hide-btn {
+        opacity: 0;
+    }
+    
+    #chk {
+        position: absolute;
+        visibility: hidden;
+    }
+    
+    #chk:checked~.sidebar {
+        left: 0;
+    }
+    
+    #chk:checked~.show-btn {
+        opacity: 0;
+    }
+    
+    #chk:checked~.hide-btn {
+        opacity: 1;
+    }
+    
+    #chk:checked~body {
+        width: 81%;
+        transition: 0.9s;
+    }
+    
+    @media (max-width:768px) {
+        .sidebar {
+            width: 100%;
+            text-align: center;
+        }
+        .header h1 {
+            display: none;
+        }
+    }
+    
+    .footer {
+        background: #333;
+        margin-top: 40px;
+    }
+    
+    .footer .box-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .footer .box-container .box {
+        padding: 10px;
+        flex: 1 1 25rem;
+    }
+    
+    .footer .box-container .box h3 {
+        font-size: 30px;
+        padding: .7rem 0;
+        color: #fff;
+        margin-left: 20px;
+    }
+    
+    .footer .box-container .box p {
+        font-size: 20px;
+        padding: 5px;
+        color: #eee;
+        margin-left: 20px;
+    }
+    
+    .footer .box-container .box a {
+        display: block;
+        font-size: 20px;
+        padding: .7rem 0;
+        color: #eee;
+    }
+    
+    .footer .box-container .box a:hover {
+        color: var(--orange);
+        text-decoration: underline;
+    }
+    
+    .footer .credit {
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: normal;
+        color: #fff;
+        border-top: .1rem solid rgba(255, 255, 255, .2);
+    }
+    
+    .footer .credit span {
+        color: var(--orange);
+    }
+    /* media queries  */
+    
+    @media (max-width:1200px) {
+        html {
+            font-size: 55%;
+        }
+    }
+    
+    @media (max-width:991px) {
+        section {
+            padding: 2rem;
+        }
+    }
+    
+    @media (max-width:768px) {
+        #menu-bar {
+            display: initial;
+        }
+    }
+    
+    @media (max-width:450px) {
+        html {
+            font-size: 50%;
+        }
+        .heading span {
+            font-size: 2.5rem;
+        }
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1 style="color:rgb(236, 71, 42);text-shadow:4px 4px 4px rgb(105, 6, 6);margin-left:-80px">𝔼-𝕃𝕀𝔹ℝ𝔸ℝ𝕐</h1>
+    </div>
+
+    <input type="checkbox" name="" id="chk" />
+    <label for="chk" class="show-btn">
+                    <i class="fa fa-bars" style="color:rgb(235, 225, 225)"></i>
+                </label>
+    <label for="chk" class="hide-btn">
+                    <i class="fa fa-times" style="color:red"></i>
+                </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">HOME</a></li><br><br>
+            <li><a href="./about.html">ABOUT</a></li><br><br>
+            <li><a href="./newuser.html">SIGN UP/NEW USER</a></li><br><br>
+            <li><a href="./contact.html">CONTACT</a></li><br><br>
+        </ul>
+    </div>
+
+    <!--Para-->
+    <div class="sec">
+        <div class="left">
+            <h2 style="margin-top:-10px;margin-bottom:15px">About Us <i class="fa fa-book" aria-hidden="true"></i></h2>
+            <p>E-Library is a project that manages and stores books information electronically according to students needs. The system helps both students and library manager to keep a constant track of all the books available in the library. It allows both
+                the admin and the student to search for the desired book.It becomes necessary for colleges to keep a continuous check on the books issued and returned and even calculate fine. This task if carried out manually will be tedious and includes
+                chances of mistakes. These errors are avoided by allowing the system to keep track of information such as issue date, last date to return the book and even fine information and thus there is no need to keep manual track of this information
+                which thereby avoids chances of mistakes.
+
+            </p>
+        </div>
+        <div class="right">
+            <img src="./asset/1.jpg" alt="">
+        </div>
+        <div class="social">
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p> </p>
+            </div>
+            <div class="box" style="margin-left:30px">
+                <h3>branch locations</h3>
+                <a href="#">india</a>
+                <a href="#">USA</a>
+                <a href="#">japan</a>
+                <a href="#">france</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="./package/AboutUs.html">About Us</a>
+                <a href="#Gallery">Gallery</a>
+                <a href="#Services">Services</a>
+                <a href="./package/Reviews.html">Review</a>
+                <a href="./package/Contact Us.html">Contact</a>
+
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+                <a href="#">linkedin</a>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> Created by <span> Aditi And Garima </span> | All rights reserved! </h1>
+
+    </section>
+
+
+    </footer>
+
+
+</body>
+
+</html>
