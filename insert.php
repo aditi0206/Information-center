@@ -7,10 +7,7 @@ include "table1.php";
 <!DOCTYPE html>
 <html>
 <head>
-    
-    <title> </title>
- 
-    
+<title> </title>
 </head>
 <body>
  

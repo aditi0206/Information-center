@@ -61,7 +61,7 @@ while($res=mysqli_fetch_array($result))
     
   $result=mysqli_query($mysqli,"update liblogin set roll='$roll',Uname='$Uname',pass='$pass' where roll=$id");
   if($result){
-      header("location:table1.php");
+      header( "location:table1.php");
   }
   else{
       echo "Failed";
