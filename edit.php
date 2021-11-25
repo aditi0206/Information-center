@@ -24,30 +24,32 @@ while($res=mysqli_fetch_array($result))
     height: 400px;
     width: 400px;
     
-    box-shadow: 10px 10px 10px 5px;
-    text-shadow: 2px 2px 2px blue;
-    margin-top:30px;
+    box-shadow: 10px 10px 10px 10px;
+    text-shadow: 1px 1px 1px grey;
+    margin-top:70px;
+    margin-left:35%;
 }
+ 
     </style>
     
 </head>
-<a href="table1.php">Home</a>
-<body>
+<a href="table1.php" style="border:10px solid brown;border-style:outset;text-shadow: 1px 1px 1px grey;background-color:skyblue;margin-top:15%;padding:5px;font-size:30px;text-decoration:none">Home</a>
+<body style="background-color:wheat">
 <div class="login">
 <form action="" method="POST">
             <fieldset style="padding: 10px;">
 
-                <legend style="font-size:20px;color:wheat">LOGIN DETAILS</legend>
+                <legend style="font-size:20px;color:black">LOGIN DETAILS</legend>
                 <br>
-                <b><p style="font-size:20px;color:white">Univ.roll: <input type="number" name="roll" id="roll" placeholder="univ. rollno" value="<?php echo $roll;?>"autocomplete="off"></p>
+                <b><p style="font-size:20px;color:black">Univ.roll: <input type="number" name="roll" id="roll" placeholder="univ. rollno" value="<?php echo $roll;?>"autocomplete="off"></p>
                     <br></b>
-                <b> <p style="font-size:20px;color:white">Username: <input type="text" name="Uname" id="Uname" placeholder="username" value="<?php echo $Uname;?>" autocomplete="off"></p>
+                <b> <p style="font-size:20px;color:black">Username: <input type="text" name="Uname" id="Uname" placeholder="username" value="<?php echo $Uname;?>" autocomplete="off"></p>
                 <br></b>
-                <b><p style="font-size:20px;color:white">Password: <input type="password" name="pass" id="pass" placeholder="password" value="<?php echo $pass;?>"autocomplete="off"></p>
+                <b><p style="font-size:20px;color:black">Password: <input type="password" name="pass" id="pass" placeholder="password" value="<?php echo $pass;?>"autocomplete="off"></p>
                 <br>
              <input type="hidden" name="id" value=<?php echo $_GET['roll'];?>>
             </b>
-                <input type="submit" name="submit" value="Update" style="border:5px solid red;border-style=outset;padding:10px;background-color:violet;color:white;margin-left:100px">
+                <input type="submit" name="submit" value="Update" style="border:10px solid red;border-style=outset;padding:10px;background-color:violet;color:white;margin-left:130px">
             </fieldset><br>
 
             <br>
